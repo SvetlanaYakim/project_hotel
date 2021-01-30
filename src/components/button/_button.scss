@@ -1,0 +1,39 @@
+$widthSmall: 40px;
+$widthMide: 87px;
+$widthBig: 196px;
+
+.button {
+    text-align: center;
+    height: 44px;
+    border-radius: 22px;
+    line-height: 14.63px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #BC9CFF;
+    background: #fff;
+    border: 2px solid;
+}
+.button-color {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #fff;
+}
+.button-color:hover, .button:hover {
+    opacity: 0.5;
+}
+.text {
+    border: none;
+}
+.text:hover {
+    color: #1F2041;
+}
+.widthSmall {
+    width: $widthSmall;
+}
+.widthMide {
+    width: $widthMide;
+}
+.widthBig {
+    width: $widthBig;
+}

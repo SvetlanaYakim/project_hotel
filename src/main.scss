@@ -1,0 +1,17 @@
+@import 'components/nullstyle';
+@import 'components/button/button';
+
+$font-size-h1: 24px;
+$font-size-h2: 19px;
+$font-size-h3: 12px;
+$font-size-body: 14px;
+
+body {
+    font-family: Montserrat;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+h1, h2, h3, body {
+    font-weight: bold;
+    color:  rgb(31, 32, 65);
+}

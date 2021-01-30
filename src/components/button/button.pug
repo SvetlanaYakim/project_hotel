@@ -1,0 +1,9 @@
+mixin btn(options)
+    -
+        var buttonClassName = "button"
+        buttonClassName += options.isColor ? " button-color" : ""
+        buttonClassName += options.isText ? " text" : ""
+        buttonClassName += options.widthSmall ? " widthSmall"  : ""
+        buttonClassName += options.widthMide ? " widthMide" : ""
+        buttonClassName += options.widthBig ? " widthBig" : ""
+    button(class = buttonClassName)= options.title || "Button"
