@@ -1,0 +1,22 @@
+include ../../button/button.pug
+- var values = ["взрослые", "дети", "младенцы"]
+
+
+
+.dropdown
+    .dropdown__container
+        .dropdown__text
+            |  Сколько гостей
+            //- input(type="text", name="text", id="text", placeholder="Сколько гостей")  
+            img(src=arrow) 
+        ul.dropdown__menu
+            each val in values
+                li.dropdown__item= val
+                .dropdown__number
+                    .dropdown__circle -
+                    .dropdown__value 0
+                    .dropdown__circle +
+            else 
+                li.dropdown__item There are no values
+            .dropdown__btn
+                +btn({title: "Применить", isText: true})

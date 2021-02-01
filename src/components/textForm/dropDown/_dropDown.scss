@@ -1,0 +1,75 @@
+$font-size-body: 14px;
+
+.dropdown {
+    display: inline-flex;
+    &__container {
+    }
+
+    &__text {
+        width: 320px;
+        height: 44px;
+        font-size: $font-size-body;
+        padding-left: 15px;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        border-radius: 2px;
+        line-height: 44px;
+        font-weight: 400;
+        color: rgba(31, 32, 65, 0.75);
+    }
+    &__menu {
+        width: 320px;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        
+    }
+    &__item {
+        display: flex;
+        padding-left: 15px;
+        line-height: 44px;
+        flex: 68.75%;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &__number {
+        display: flex;
+        flex: 31.25%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__circle {
+        display: flex;
+        height: 30px;
+        width: 30px;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    &__value {
+        font-size: 12px;
+    }
+    
+    &__container:hover &__menu {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    &__container:hover &__text {
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+    }
+    &__container:hover {
+        height: 224px;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        border-radius: 2px; 
+    }
+    &__btn {
+        width: 320px;
+        padding-right: 7px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+
