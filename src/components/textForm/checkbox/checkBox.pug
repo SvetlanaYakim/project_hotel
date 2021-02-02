@@ -1,0 +1,14 @@
+- var list = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
+
+.checkBox
+.checkBox__list
+    form.checkBox__form(action="#", method="post")
+        .checkBox__wrapper
+            .checkBox__item Можно курить
+            input.checkBox__input#smoke(type="checkbox", name="smoke") 
+        .checkBox__wrapper    
+            .checkBox__item Можно с питомцами
+            input.checkBox__input#pets(type="checkbox", name="pets") 
+        .checkBox__wrapper    
+            .checkBox__item Можно пригласить гостей (до 10 человек)
+            input.checkBox__input#guests(type="checkbox", name="guests") 

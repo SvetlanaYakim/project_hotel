@@ -14,7 +14,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
     },
-    mode: 'development',
+    
     devServer: {
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, './dist'),
@@ -22,6 +22,7 @@ module.exports = {
         compress: true,
         hot: true,
         port: 8080,
+        writeToDisk: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -70,5 +71,5 @@ module.exports = {
             
         ],
     },
-
+    mode: process.env.NODE_ENV || 'development'
 }
