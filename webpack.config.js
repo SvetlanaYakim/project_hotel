@@ -1,5 +1,7 @@
 const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
@@ -23,11 +25,19 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/index.pug'), // шаблон
+            template: path.resolve(__dirname, './src/_index.pug'), // шаблон
             filename: 'index.html', // название выходного файла
         }),
+        new HtmlWebpackPugPlugin(),
+
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'src/images', to: 'images' },
+            ],
+        }), // Copy images
     ],
     module: {
         rules: [
@@ -52,18 +62,12 @@ module.exports = {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
+            // pug
             {
                 test: /\.pug$/,
-                use: [
-                    {loader: 'html-loader'}, 
-                    {
-                    loader: "pug-html-loader",
-                    options: {
-                        "pretty":true
-                        }
-                    },
-                ],
-            },      
+                loader: 'pug-loader'
+            },
+            
         ],
     },
 
