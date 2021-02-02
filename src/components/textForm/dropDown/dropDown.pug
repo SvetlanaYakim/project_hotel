@@ -1,22 +1,19 @@
 include ../../button/button.pug
-- var values = ["взрослые", "дети", "младенцы"]
-
-
+- var guests = ["взрослые", "дети", "младенцы"]
 
 .dropdown
     .dropdown__container
         .dropdown__text
             |  Сколько гостей
-            //- input(type="text", name="text", id="text", placeholder="Сколько гостей")  
-            img(src=arrow) 
+            img.dropdown__arrow#arrow(src='/images/arrow.jpg') 
         ul.dropdown__menu
-            each val in values
-                li.dropdown__item= val
+            each person in guests
+                li.dropdown__item= person
                 .dropdown__number
                     .dropdown__circle -
                     .dropdown__value 0
                     .dropdown__circle +
             else 
-                li.dropdown__item There are no values
+                li.dropdown__item No guests
             .dropdown__btn
                 +btn({title: "Применить", isText: true})
