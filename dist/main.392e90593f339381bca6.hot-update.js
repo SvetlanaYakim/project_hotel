@@ -14,7 +14,7 @@ self["webpackHotUpdatehotel"]("main",{
   \**********************************************************************************************************************************************/
 /***/ (() => {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: property \\\"bg\\\" must be followed by a ':'\\n        on line 18 of src/components/textForm/checkbox/_checkBox.scss\\n        from line 5 of src/main.scss\\n>>             bg\\n\\n   ------------^\\n\");\n\n//# sourceURL=webpack://hotel/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: property \\\"pb\\\" must be followed by a ':'\\n        on line 38 of src/components/textForm/checkbox/_checkBox.scss\\n        from line 5 of src/main.scss\\n>>         pb\\n\\n   --------^\\n\");\n\n//# sourceURL=webpack://hotel/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ })
 
@@ -24,7 +24,7 @@ eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/dis
 /******/ 
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "4e124ad6bdc591838fe0"
+/******/ 		__webpack_require__.h = () => "10ecb7fb27a515d5e74b"
 /******/ 	})();
 /******/ 	
 /******/ }

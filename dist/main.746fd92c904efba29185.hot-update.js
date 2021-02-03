@@ -12,7 +12,7 @@ self["webpackHotUpdatehotel"]("main",{},
 /******/ 
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "fb10170e05a8a0fb5330"
+/******/ 		__webpack_require__.h = () => "53d6dbe393db0f242a25"
 /******/ 	})();
 /******/ 	
 /******/ }

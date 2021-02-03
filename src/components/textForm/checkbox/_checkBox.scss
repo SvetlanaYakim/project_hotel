@@ -1,29 +1,39 @@
 $width: 222px;
-
+$widthText: 192px;
 .checkBox {
-    display: block;
     width: $width;
-    
-    &__list {
-        width: $width;
+    &__custom input {
+        display: none;
     }
-    &__wrapper {
-        display: flex;
-        width: $width;
-        color: rgba(31, 32, 65, 0.5);
-        padding-bottom: 12px;
-    }
-    &__item {
-        flex: 86.5%;
+    &__custom span {
+        display: inline-flex;
+        align-items: start;
+        user-select: none;
+        padding-bottom: 10px;
         font-weight: 400;
         line-height: 18px;
-        padding-left: 10px;
-
-        }
-    
-    &__input {
-        order: -1;
+        opacity: 0.5;
+        width: $widthText;
+    }
+    &__custom span::before {
+        content: '';
+        display: inline-block;
         width: 20px;
         height: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+    &__custom input:not(:disabled):not(:checked)+span:hover::before {
+        border-color: #BC9CFF;
+    }
+    &__custom input:checked+span::before {
+        background-image: url("images/Vector.svg");
+        border-color: #BC9CFF;
     }
 }

@@ -14,7 +14,7 @@ self["webpackHotUpdatehotel"]("main",{
   \**********************************************************************************************************************************************/
 /***/ (() => {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: Invalid CSS after \\\"    }\\\": expected selector or at-rule, was \\\"}\\\"\\n        on line 33 of src/components/textForm/checkbox/_checkBox.scss\\n        from line 5 of src/main.scss\\n>>     }\\n\\n   -----^\\n\");\n\n//# sourceURL=webpack://hotel/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: property \\\"d\\\" must be followed by a ':'\\n        on line 34 of src/components/textForm/checkbox/_checkBox.scss\\n        from line 5 of src/main.scss\\n>>         d\\n\\n   --------^\\n\");\n\n//# sourceURL=webpack://hotel/./src/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ })
 
@@ -24,7 +24,7 @@ eval("throw new Error(\"Module build failed (from ./node_modules/sass-loader/dis
 /******/ 
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "f814927e589c8318aee2"
+/******/ 		__webpack_require__.h = () => "20e748ef3aa704212159"
 /******/ 	})();
 /******/ 	
 /******/ }
