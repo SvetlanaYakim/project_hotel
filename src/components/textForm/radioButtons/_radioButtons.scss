@@ -1,0 +1,43 @@
+$width: 220px;
+
+.sex {
+    width: $width;
+    &__radio {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__wrapper input {
+        display: none;
+    }
+    &__text {
+        display: inline-flex;
+        font-weight: 400;
+        line-height: 24px;
+        opacity: 0.5;
+    }
+    &__wrapper &__text::before {
+        content: '';
+        display: inline-block;
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    &__wrapper &__text:hover {
+        border-color: #BC9CFF;
+        opacity: 0.75;
+    }
+    &__wrapper input:checked+&__text:hover::before {
+        border-color: #BC9CFF;
+        background: url('images/circle.png') no-repeat center center;
+    }
+}
+
+
+
+
+
