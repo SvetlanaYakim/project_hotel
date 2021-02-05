@@ -1,13 +1,12 @@
-- var list = ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)']
-
-.checkBox
-    form(action="#", method="post")
-        label.checkBox__custom
-            input#smoke(type="checkbox", name="smoke")
-            span Можно курить
-        label.checkBox__custom
-            input#pets(type="checkbox", name="pets")
-            span Можно с питомцами
-        label.checkBox__custom
-            input#guests(type="checkbox", name="guests")
-            span Можно пригласить гостей (до 10 человек)
+mixin checkBox(list, option)   
+    -
+        var tagClassName = "checkBox__text"
+        tagClassName += option.widthText ? " widthText" : " "
+    .checkBox
+        form(action="#", method="post")
+            for idNameDescription in list
+                label.checkBox__custom
+                    input(id= idNameDescription.id)(type="checkbox", name= idNameDescription.id)
+                    span(class = tagClassName)= idNameDescription.name
+                    if option.widthText
+                        p.checkBox__description= idNameDescription.description

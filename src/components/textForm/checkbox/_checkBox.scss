@@ -1,11 +1,52 @@
 $width: 222px;
 $widthText: 192px;
+// .checkBox {
+//     width: $width;
+//     &__custom input {
+//         display: none;
+//     }
+//     &__custom span {
+//         display: inline-flex;
+//         align-items: start;
+//         user-select: none;
+//         padding-bottom: 10px;
+//         font-weight: 400;
+//         line-height: 18px;
+//         opacity: 0.5;
+//         width: $widthText;
+//     }
+//     &__custom span::before {
+//         content: '';
+//         display: inline-block;
+//         width: 20px;
+//         height: 20px;
+//         flex-shrink: 0;
+//         flex-grow: 0;
+//         border: 1px solid rgba(31, 32, 65, 0.25);
+//         border-radius: 4px;
+//         margin-right: 10px;
+//         background-repeat: no-repeat;
+//         background-position: center center;
+//         background-size: 50% 50%;
+//     }
+//     &__custom input:not(:disabled):not(:checked)+span:hover::before {
+//         border-color: #BC9CFF;
+//     }
+//     &__custom input:checked+span::before {
+//         background-image: url("images/Vector.svg");
+//         border-color: #BC9CFF;
+//     }
+//     .widthText {
+//         font-weight: 700;
+//     }
+// }
+
 .checkBox {
     width: $width;
     &__custom input {
         display: none;
     }
-    &__custom span {
+    &__text {
         display: inline-flex;
         align-items: start;
         user-select: none;
@@ -15,7 +56,7 @@ $widthText: 192px;
         opacity: 0.5;
         width: $widthText;
     }
-    &__custom span::before {
+    &__text::before {
         content: '';
         display: inline-block;
         width: 20px;
@@ -29,11 +70,24 @@ $widthText: 192px;
         background-position: center center;
         background-size: 50% 50%;
     }
-    &__custom input:not(:disabled):not(:checked)+span:hover::before {
+    &__custom input:not(:disabled):not(:checked)+&__text:hover::before {
         border-color: #BC9CFF;
     }
-    &__custom input:checked+span::before {
+    &__custom input:checked+&__text::before {
         background-image: url("images/Vector.svg");
         border-color: #BC9CFF;
+    }
+    .widthText {
+        font-weight: 700;
+        opacity: 0.75;
+        width: 236px;
+    }
+    .checkBox__description {
+        font-weight: 400;
+        opacity: 0.5;
+        width: 236px;
+        height: 28px;
+        margin-left: 30px;
+        margin-bottom: 10px;
     }
 }

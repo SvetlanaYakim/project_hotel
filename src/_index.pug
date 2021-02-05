@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -11,3 +10,13 @@ html(lang="en")
             include components/textForm/checkbox/checkBox.pug
             //- include components/textForm/dropDown/dropDown.pug  
             include components/textForm/radioButtons/radioButtons.pug  
+            +checkBox([{id: "smoke", name: "Можно курить"}, 
+                {id: "pets", name: "Можно с питомцами"}, 
+                {id: "guests", name: "Можно пригласить гостей (до 10 человек)"}])
+
+            +checkBox([{id: "breakfast", name: "Завтрак"}, 
+                {id: "table", name: "Письменный стол"}, 
+                {id: "chair", name: "Стул для кормления"},
+                {id: "crib", name: "Кроватка"},
+                {id: "tv", name: "Телевизор"},
+                {id: "shampoo", name: "Шампунь"}])
