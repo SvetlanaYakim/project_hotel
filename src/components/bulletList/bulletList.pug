@@ -1,0 +1,8 @@
+mixin bulletList(list)
+    -
+    .list
+        ul.list__list
+            for items in list
+                .list__wrapper
+                    .list__marker  
+                    li.list__item= items.name

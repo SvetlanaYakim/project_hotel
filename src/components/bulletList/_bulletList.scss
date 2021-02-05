@@ -1,0 +1,26 @@
+.list {
+    &__list {
+        font-weight: 400;
+        width: 220px;
+        line-height: 24px;
+        opacity: 0.75;
+    }
+    &__wrapper {
+        display: flex;
+    }
+    &__item {
+        padding-bottom: 10px;
+        flex: 100%-4.75%;
+    }
+    &__marker {
+        display: inline-flex;
+        content: " ";
+        margin: 5px 10px 0 0;
+        width: 10px;
+        height: 10px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        background:  rgba(31, 32, 65, 0.25);
+        border-radius: 5px;
+        flex: 4.75%;
+    }
+}
