@@ -4,7 +4,8 @@
   "description": "Learning pug, scss, BEM, some JS, webpack",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "start": "NODE_ENV=development webpack serve --open"
+    "start": "NODE_ENV=development webpack serve --open",
+    "watch": "NODE_ENV=development webpack"
   },
   "keywords": [],
   "author": "Svetlana Merkusheva",

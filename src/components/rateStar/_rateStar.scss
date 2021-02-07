@@ -7,7 +7,7 @@
         height: 19px;
         background-image: url("images/star_border.png");
     }
-    &__item:checked {
+    .checked {
         background-image: url("images/star.png");
     }
 }

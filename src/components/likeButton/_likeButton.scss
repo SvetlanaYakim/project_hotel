@@ -1,0 +1,26 @@
+.like {
+    &__btn {
+        width: 40px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #BC9CFF;
+        border-radius: 10px;
+        line-height: 12px;
+        background: #fff;
+    }
+    &__img {
+        padding-top: 1px;
+        padding-left: 5px;
+    }
+    &__count {
+        font-style: 10px;
+        color: #BC9CFF;
+        font-weight: 400;
+        padding-right: 5px;
+    }
+    &__btn:disabled {
+        opacity: 0.25;
+    }
+}

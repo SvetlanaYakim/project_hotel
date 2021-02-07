@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -7,20 +6,8 @@ html(lang="en")
         title 
     body.body
         .wrapper
-            include components/textForm/checkbox/checkBox.pug 
-            include components/textForm/radioButtons/radioButtons.pug  
-            //- +checkBox([{id: "smoke", name: "Можно курить"}, 
-            //-     {id: "pets", name: "Можно с питомцами"}, 
-            //-     {id: "guests", name: "Можно пригласить гостей (до 10 человек)"}])
-
-            +checkBox([{id: "breakfast", name: "Завтрак"}, 
-                {id: "table", name: "Письменный стол"}, 
-                {id: "chair", name: "Стул для кормления"},
-                {id: "crib", name: "Кроватка"},
-                {id: "tv", name: "Телевизор"},
-                {id: "shampoo", name: "Шампунь"}], {widthText: false})
-            //- +checkBox([{ id: "table", name: "Письменный стол"}, {id: "pets", name: "Можно с питомцами"}, 
-            //- {id: "guests", name: "Можно пригласить гостей (до 10 человек)"}], {widthText:true}, {description:"text"})
-            +checkBox([{ id: "table", name: "Широкий коридор", description: "Ширина коридоров в номере не менее 91 см."}, 
-                {id: "pets", name: "Помощник для инвалидов", description: "На 1 этаже вас встретит специалист  и проводит до номера."}], 
-                {widthText: true})
+            //- include components/textForm/dropDown/dropDown.pug 
+            //- include components/likeButton/likeButton.pug
+            //- +likeButton()
+            include components/rateStar/rateStar.pug
+            +Star({isStar: false})

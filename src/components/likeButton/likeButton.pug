@@ -1,0 +1,11 @@
+mixin likeButton(options)
+    -
+    .like
+        button.like__btn()
+            .like__img
+                if disabled
+                    img(src='images/favorite_border.png')
+                else
+                    img(src='images/favorite.png')
+            .like__count
+                p 12
