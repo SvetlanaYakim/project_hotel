@@ -1,0 +1,16 @@
+mixin textList(list, options)
+    -
+    .list
+        ul.list__list
+            for row in list
+                .list__row
+                    .list__img
+                        img(src=row.img)
+                    li.list__item 
+                        h3= row.title
+                        p.list__text= row.text 
+
+//- +textList([{img: "images/insert_emoticon.svg", title: "Комфорт", text: "Шумопоглощающие стены"}, 
+//-     {img: "images/location_city.svg", title: "Удобство", text: "Окно в каждой из спален"}])
+
+
