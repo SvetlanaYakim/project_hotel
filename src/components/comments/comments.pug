@@ -1,0 +1,26 @@
+include ../likeButton/likeButton.pug
+//-
+    +comments({name: "Мурад Сарафанов", - name user
+        img: "images/userAvatar.png",   - link to image
+        count: "5 дней назад",          - count days
+        text: "Великолепный матрас на   - text comment
+        кровати в основной спальне!...
+        "})
+//
+
+mixin comments(options)
+    .comments
+        .comments__row
+            .comments__img
+                img.comments__image(src= options.img)
+            .comments__indent
+                h3= options.name
+                p.comments__count= options.count
+        .comments__row
+            .comments__img
+                +likeButton({disabled: false})
+            .comments__indent
+                p.comments__text= options.text
+
+//- +comments({name: "Мурад Сарафанов", img: "images/userAvatar.png", count: "5 дней назад", 
+//-         text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})

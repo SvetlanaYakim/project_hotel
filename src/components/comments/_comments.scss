@@ -1,0 +1,29 @@
+$width: 592px;
+
+.comments {
+    width: $width;
+    &__row {
+        display: flex;
+    }
+    &__img {
+        display: inline-flex;
+        justify-content: center;
+        flex: 48px;
+        .comments__image {
+            margin: -10px -6px -18px -20px;
+        }
+    }
+    &__indent {
+        flex: $width - 48px;
+        opacity: 0.75;
+        line-height: 24px;
+    }
+    &__count {
+        font-weight: 400;
+    }
+    &__text {
+        font-weight: 400;
+        padding-left: 14px;
+    }
+}
+
