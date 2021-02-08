@@ -1,5 +1,11 @@
+//-
+    +likeButton({disabled: false - choose false and true
+                                    false - button work
+                                    true - button no work
+    })
+//
+
 mixin likeButton(options)
-    -
     .like
         button.like__btn()
             .like__img
@@ -9,3 +15,5 @@ mixin likeButton(options)
                     img(src='images/favorite.png')
             .like__count
                 p 12
+
+//- +likeButton({disabled: false})
