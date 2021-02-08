@@ -1,17 +1,16 @@
-$font-size-body: 14px;
-$listGuest: 3;               // number of guests 
+$font-size-body: 14px;           // number of guests 
 $heightRow: 44px;
-
+$widthRow: var(--width);
 .dropdown {
     display: inline-flex;
     &__text {
-        width: 320px;
-        height: 44px;
+        width: $widthRow;
+        height: $heightRow;
         font-size: $font-size-body;
         padding-left: 15px;
         border: 1px solid rgba(31, 32, 65, 0.5);
         border-radius: 2px;
-        line-height: 44px;
+        line-height: $heightRow;
         font-weight: 400;
         color: rgba(31, 32, 65, 0.75);
         display: flex;
@@ -26,15 +25,17 @@ $heightRow: 44px;
         display: block;
     }
     &__menu {
-        width: 320px;
+        width: $widthRow;
         display: none;
         position: absolute;
         z-index: 1;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        border-radius: 2px;
     }
     &__item {
         display: flex;
         padding-left: 15px;
-        line-height: 44px;
+        line-height: $heightRow;
         flex: 68.75%;
         font-size: 12px;
         text-transform: uppercase;
@@ -56,52 +57,26 @@ $heightRow: 44px;
         cursor: pointer;
     }
     &__value {
-        font-size: 12px;
+    font-size: 12px;
     }
-    // &__arrow:hover {
-    //     .dropdown__menu {
-    //         display: flex;
-    //         flex-wrap: wrap; 
-    //     }
-    //     .dropdown__text {
-    //         width: 319px;
-    //         border-width: 0 0 1px 0;
-    //         border-radius: 0;
-    //     }
-    //     .dropdown__container {
-    //         width: 320px;
-    //         height: ($listGuest + 2)*$heightRow;
-    //         border: 1px solid rgba(31, 32, 65, 0.5);
-    //         border-radius: 2px;
-    //     }
-    // } 
     &__container:hover {
-        width: 320px;
-        height: ($listGuest + 2)*$heightRow;
-        border: 1px solid rgba(31, 32, 65, 0.5);
-        border-radius: 2px;
         .dropdown__menu {
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
         }
         .dropdown__text {
-            width: 319px;
-            border-width: 0 0 1px 0;
-            border-radius: 0;
+            width: $widthRow;
+            border-width: 1px 1px 0 1px;
+            border-radius: 2px;
         }
     }
-
     &__btn {
-        width: 320px;
-        height: 20px;
-        padding-right: 7px;
+        width: $widthRow;
+        padding: 1px 14px;
         display: flex;
-        justify-content: flex-end;
-        @if $listGuest == 0 {
-            display: none;
-        }
+        flex-direction:row-reverse;
+        justify-content: space-between;
     }
 }
-
 
 

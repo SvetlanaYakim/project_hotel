@@ -1,19 +1,34 @@
 include ../../button/button.pug
-- var guests = ["взрослые", "дети", "младенцы"]
+//-+dropDown({list: ["спальни", "кровати", "ванные комнаты"],   - list row
+    title: "2 спальни, 2 кровати...",                           - title dropDown
+    button: false,                                              - on/off button
+    width: "320px"                                              - width row dropDown
+    })
+//
 
-.dropdown
-    .dropdown__container
-        .dropdown__text
-            |  Сколько гостей
-            img.dropdown__arrow#arrow(src='/images/arrow.jpg') 
-        ul.dropdown__menu
-            each person in guests
-                li.dropdown__item= person
-                .dropdown__number
-                    .dropdown__circle -
-                    .dropdown__value 0
-                    .dropdown__circle +
-            else 
-                li.dropdown__item No guests
-            .dropdown__btn
-                +btn({title: "Применить", isText: true})
+mixin dropDown(options)
+    - var count = 0
+    - var width = "--width:"
+    .dropdown(style=width+= options.width)
+        .dropdown__container
+            .dropdown__text
+                = options.title
+                img.dropdown__arrow#arrow(src='/images/arrow.jpg') 
+            ul.dropdown__menu
+                each item in options.list
+                    li.dropdown__item= item
+                    .dropdown__number
+                        .dropdown__circle -
+                        .dropdown__value= count
+                        .dropdown__circle +
+                else 
+                    li.dropdown__item No row
+                if options.button
+                    .dropdown__btn
+                        +btn({title: "Применить", isText: true})
+                        if count > 0
+                            +btn({title: "Очистить", isText: true})
+
+
+//- +dropDown({list: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", button: true, width: "266px"})
+//- +dropDown({list: ["спальни", "кровати", "ванные комнаты"], title: "2 спальни, 2 кровати...", button: false, width: "320px"})
