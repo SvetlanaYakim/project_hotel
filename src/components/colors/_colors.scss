@@ -1,0 +1,56 @@
+$color: var(--color);
+$opacity: var(--opacity);
+$width: 70px;
+$height: 70px;
+
+.color {
+    width: $width + 40px + 170px;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__color {
+        &_DarkShade100 {
+            height: $height;
+            width: $width;
+            border: 1px solid $color;
+            border-radius: 6px;
+            background: $color;
+            opacity: $opacity;
+            margin-right: 40px;
+        }
+    
+        &_DarkShade75 {
+            @extend .color__color_DarkShade100;
+        }
+    
+        &_DarkShade50 {
+            @extend .color__color_DarkShade100;
+        }
+    
+        &_DarkShade25 {
+            @extend .color__color_DarkShade100;
+        }
+    
+        &_DarkShade5 {
+            @extend .color__color_DarkShade100;
+        }
+    
+        &_Purple {
+            @extend .color__color_DarkShade100;
+        }
+    
+        &_Green {
+            @extend .color__color_DarkShade100;
+        }
+    }
+    
+    &__name {
+        line-height: 28px;
+        font-style: 19px;
+        &_color {
+            font-weight: 400;
+        }
+    }
+}

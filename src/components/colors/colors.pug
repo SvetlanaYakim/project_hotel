@@ -1,0 +1,30 @@
+//- example use
+    +color({list: [{name: "Dark Shade 100%", 
+                    class: "_DarkShade100", 
+                    color: "#1F2041", 
+                    opacity: "100%"}, 
+            {name: "Dark Shade 75%", class: "_DarkShade75", color: "#1F2041", opacity: "75%"}, 
+            })
+//
+
+mixin color(options)
+    .color
+        for each in options.list
+            -
+                var color = "--color: "
+                var opacity = "; --opacity: "
+                var colorClass = "color__color"
+            .color__wrapper
+                div(class= colorClass+= each.class)(style=color+= each.color + opacity+each.opacity)
+                p.color__name= each.name
+                    |
+                    br
+                    span.color__name_color=each.color
+
+//- +color({list: [{name: "Dark Shade 100%", class: "_DarkShade100", color: "#1F2041", opacity: "100%"}, 
+//-             {name: "Dark Shade 75%", class: "_DarkShade75", color: "#1F2041", opacity: "75%"}, 
+//-             {name: "Dark Shade 50%", class: "_DarkShade50", color: "#1F2041", opacity: "50%"}, 
+//-             {name: "Dark Shade 25%", class: "_DarkShade25", color: "#1F2041", opacity: "25%"}, 
+//-             {name: "Dark Shade 5%", class: "_DarkShade5", color: "#1F2041", opacity: "5%"}, 
+//-             {name: "Purple", class: "_Purple", color: "#BC9CFF"}, 
+//-             {name: "Green", class: "_Green", color: "#6FCF97"}]})
