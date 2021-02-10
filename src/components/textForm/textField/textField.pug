@@ -1,4 +1,5 @@
-form.form(action="#")
-    input(type="email", name="email", placeholder="Email")
-
-
+mixin input(options)
+    .input
+        form.input__form(action="#")
+            input(type="email", name="email", placeholder="Email")
++input
