@@ -1,0 +1,20 @@
+mixin pagination(options)
+    .pagination
+        .pagination__wrapper
+            .pagination__blockLink
+                -
+                    var number = 1
+                    var className = "pagination__"
+                for page in options.list
+                    a(href= page.link, class= page.class ? className + page.class : className + "link")= number++
+                .pagination__empty.pagination__link ...
+                a(href= options.lastLink, class= className + "link" + " " + className + "last")= number++
+                a(href= options.lastLink, class= className + "link" + " " + className + "arrow")
+            .pagination__content
+                p.pagination__text= options.text
+
++pagination({list: [{link: "#", class: "active"}, 
+    {link: "#"}, {link: "#"}, {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, 
+    {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, {link: "#", class: "hidden"}, 
+    {link: "#", class: "hidden"}], 
+    text: "1 – 12 из 100+ вариантов аренды", lastLink: "#", arrowLink: "#"})
