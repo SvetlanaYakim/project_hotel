@@ -1,0 +1,25 @@
+//- example use
+    +titels({list:[
+        {title: "h1", 
+        content: "This one is the sub-section or widget title", 
+        class: "_h1"}, 
+    {title: "h2", content: "Next one is the item title inside widgets", class: "_h2"},
+    ]})
+//
+
+mixin titels(options)
+    .titles
+        for each in options.list
+            -
+                var divClassNameFirst = "titels__name"
+                var divClassName = "titels__content"
+            .titels__wrapper
+                div(class= divClassNameFirst + " " + divClassNameFirst + each.class)=each.title
+                div(class= divClassName + " " + divClassName + each.class)=each.content
+
+//- +titels({list:[
+//- {title: "h1", content: "This one is the sub-section or widget title", class: "_h1"}, 
+//- {title: "h2", content: "Next one is the item title inside widgets", class: "_h2"},
+//- {title: "h3", content: "This is a label or CTA text", class: "_h3"},
+//- {title: "Body", content: "This is the body text which is used for most of the design, like paragraphs, lists, etc.", class: "_body"}
+//- ]})

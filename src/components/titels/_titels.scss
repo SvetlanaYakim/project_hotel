@@ -1,0 +1,51 @@
+.titels {
+    width: 360px;
+	&__wrapper {
+        display: flex;
+        width: 490px;
+	}
+	&__name {
+        margin-right: 30px;
+        width: 30px;
+        text-align: right;
+        text-transform: uppercase;
+        color: rgba(31, 32, 65, 0.25);
+        &_body {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            text-transform: none;
+        }
+	}
+	&__content {
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 50px;
+        color: #1F2041;
+        &_h1 {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        &_h2 {
+            font-size: 19px;
+            height: 23px;
+        }
+        &_h3 {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        &_body {
+            width: 250px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            text-transform: none;
+            color: rgba(31, 32, 65, 0.75);
+        }
+    }
+}
+@each $name in _h1,_h2, _h3, {
+    .titels__name#{$name} {
+        @extend .titels__content#{$name};
+    }
+}
