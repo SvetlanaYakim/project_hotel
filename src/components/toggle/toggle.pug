@@ -1,0 +1,12 @@
+//- example use
+    +toggle({text: "Получать спецпредложения"})
+//
+mixin toggle(options)
+    .toggle
+        label.toggle__switch
+            input(type="checkbox")
+            span.toggle__slider.toggle__slider_round
+        .toggle__content
+            p.toggle__text= options.text
+
+//- +toggle({text: "Получать спецпредложения"})
