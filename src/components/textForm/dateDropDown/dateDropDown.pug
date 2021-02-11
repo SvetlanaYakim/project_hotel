@@ -1,0 +1,17 @@
+//-  example use
+    +dateDropDown({content: "ДД.ММ.ГГГГ", width: "320px"})
+//
+mixin dateDropDown(options)
+    -
+        var width = "--width:"
+    .dateDropDown
+        .dateDropDown__wrapper
+            .dateDropDown__row(style= width + options.width)
+                p.dateDropDown__text= options.content
+                .dateDropDown__arrow
+                    img(src="images/arrow.jpg", alt="arrow")
+
+//- +dateDropDown({content: "ДД.ММ.ГГГГ", width: "320px"})
+//- +dateDropDown({content: "ДД.ММ.ГГГГ", width: "150px"})
+//- +dateDropDown({content: "19.08.2019", width: "150px"})
+//- +dateDropDown({content: "19 авг - 23 авг", width: "266px"})
