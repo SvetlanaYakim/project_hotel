@@ -1,5 +1,7 @@
 mixin input(options)
     .input
-        form.input__form(action="#")
-            input(type="email", name="email", placeholder="Email")
-+input
+        form(action="#")
+            label.input__wrapper
+                input(type="email", name="email", placeholder="Email")
+                input.input__arrow(type="image", src="images/arrow_forward_001.png")
++input()
