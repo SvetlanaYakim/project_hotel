@@ -7,7 +7,7 @@ mixin dateDropDown(options)
     .dateDropDown
         .dateDropDown__wrapper
             .dateDropDown__row(style= width + options.width)
-                p.dateDropDown__text= options.content
+                input.dateDropDown__text(type="text", placeholder= options.content)
                 .dateDropDown__arrow
                     img(src="images/arrow.jpg", alt="arrow")
 

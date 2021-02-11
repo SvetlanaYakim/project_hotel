@@ -31,7 +31,7 @@ $widthRow: var(--width);
             display: block;
             opacity: 0.5;
         }
-        .dateDropDown__text {
+        .dateDropDown__text::placeholder {
             color: rgba(31, 32, 65, 0.75);
         }
     }
