@@ -1,0 +1,11 @@
+mixin rangeSlider(options)
+    .rangeSlider
+        .rangeSlider__wrapper#range-slider
+        .rangeSlider__inputs
+            label.rangeSlider__label
+                input.rangeSlider__slider(type="number", id="inputSlider-0", min="0", max="20000", placeholder="5 000₽", readonly)
+            p.rangeSlider__rangePrice -
+            label.rangeSlider__label
+                input.rangeSlider__slider(type="number", id="inputSlider-1", min="0", max="20000", placeholder="10 000₽", readonly)
+
++rangeSlider()

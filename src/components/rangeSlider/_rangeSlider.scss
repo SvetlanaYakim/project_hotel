@@ -1,0 +1,54 @@
+.rangeSlider {
+    width: 266px;
+    display: flex;
+    flex-flow: column-reverse;
+    &__wrapper {
+    }
+
+    &__slider  {
+    }
+    &__inputs {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .rangeSlider__slider {
+        color: rgba(31, 32, 65, 0.5);
+        text-align: center;
+        width: 45px;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 22px;
+    }
+}
+.noUi-connect {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.noUi-target {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: none;
+    height: 6px;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+    display: none;
+}
+
+.noUi-handle {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    box-shadow: none;
+    
+}
+.noUi-horizontal .noUi-handle {
+    width: 14px;
+    height: 14px;
+    right: -6px;
+    top: -5px;
+}
+.noUi-horizontal {
+    
+}
