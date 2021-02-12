@@ -12,11 +12,12 @@ $widthBig: 320px;
     text-transform: uppercase;
     cursor: pointer;
     border: 2px solid;
+    color: #BC9CFF;
+    background: #fff;
 }
 .button-color {
-    background: no-repeat  96% 50%  url('images/arrow_forward.png') , linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color: #fff;
-
 }
 .button-color:hover, .button:hover {
     opacity: 0.5;
@@ -36,4 +37,6 @@ $widthBig: 320px;
 }
 .widthBig {
     width: $widthBig;
+    background: no-repeat  96% 50%  url('images/arrow_forward.png') , linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #fff;
 }
