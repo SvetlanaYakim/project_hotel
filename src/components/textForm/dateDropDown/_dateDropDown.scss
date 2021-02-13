@@ -26,10 +26,11 @@ $widthRow: var(--width);
         .dateDropDown__arrow {
             width: 14px;
             height: 8px;
-            margin-right: 15px;
             cursor: pointer;
             display: block;
             opacity: 0.5;
+            position: relative;
+            right: 15px;
         }
         .dateDropDown__text::placeholder {
             color: rgba(31, 32, 65, 0.75);
