@@ -1,6 +1,10 @@
+//- example
+    +input({isType: "text", placeholder: "Имя"})
+//
 mixin input(options)
     .input
         form(action="#")
             label.input__wrapper
-                input(type="email", name="email", placeholder="Email")
-                input.input__arrow(type="image", src="assets/img/arrow_forward_001.png")
+                input(type= options.isType, name= options.isType, placeholder= options.placeholder)
+                if options.arrow & options.isType == "email"
+                    input.input__arrow(type="image", src="assets/img/arrow_forward_001.png")

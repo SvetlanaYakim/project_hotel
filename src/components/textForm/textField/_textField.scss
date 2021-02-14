@@ -10,9 +10,11 @@
         input {
             width: 320px;
             line-height: 40px;
-            padding-left: 15px;
+            padding-left: 14.5px;
         }
-
+    }
+    &__wrapper input::placeholder {
+        letter-spacing: 1.7px;
     }
     &__wrapper:hover {
         border-color: $darkShade75;
