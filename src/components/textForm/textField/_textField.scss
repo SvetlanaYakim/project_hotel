@@ -15,6 +15,7 @@
     }
     &__wrapper input::placeholder {
         letter-spacing: 1.7px;
+        color: $darkShade25;
     }
     &__wrapper:hover {
         border-color: $darkShade75;
