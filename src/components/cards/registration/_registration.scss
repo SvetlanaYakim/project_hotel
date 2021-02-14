@@ -2,3 +2,50 @@
 @import '../../textForm/textField/textField';
 @import '../../toggle/toggle';
 @import '../../button/button';
+
+.registration {
+    width: 382px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__wrapper {
+        padding-top: 44px;
+        margin: auto;
+        width: 320px;
+    }
+    &__title {
+        font-size: $font-size-h1;
+        letter-spacing: 1.69px;
+        padding-bottom: 22px;
+    }
+    &__data {
+        padding-top: 20px;
+        padding-bottom: 9px;
+    }
+    &__inputInServis {
+    }
+    &__smallTitle {
+        padding-bottom: 7px;
+        letter-spacing: 0.8px;
+    }
+    &__content {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 29px;
+    }
+    &__text {
+        letter-spacing: 0.7px;
+    }
+}
+.input {
+    padding-bottom: 10px;
+}
+.sex {
+    margin-top: -1px;
+}
+.toggle {
+    margin-top: -2.5px;
+    padding-bottom: 20px;
+}
