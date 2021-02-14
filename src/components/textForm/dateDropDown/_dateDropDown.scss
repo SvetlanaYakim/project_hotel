@@ -1,4 +1,3 @@
-$font-size-body: 14px;           // number of guests 
 $heightRow: 44px;
 $widthRow: var(--width);
 .dateDropDown {
@@ -9,31 +8,31 @@ $widthRow: var(--width);
         width: $widthRow;
         height: $heightRow;
         font-size: $font-size-body;
-        padding-left: 15px;
-        border: 1px solid rgba(31, 32, 65, 0.25);
+        padding-left: 14px;
+        border: 1px solid $darkShade25;
         border-radius: 4px;
         line-height: $heightRow;
         font-weight: 400;
-        color: rgba(31, 32, 65, 0.25);
+        color: $darkShade25;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     &__arrow {
-        display: none;
+        width: 13px;
+        height: 6px;
+        cursor: pointer;
+        opacity: 0.5;
+        margin-right: 15px;
+    }
+    &__text {
+        width: 100px;
+        font-family: $font-family;
+        letter-spacing: 1.2px;
     }
     &__wrapper:hover {
-        .dateDropDown__arrow {
-            width: 14px;
-            height: 8px;
-            cursor: pointer;
-            display: block;
-            opacity: 0.5;
-            position: relative;
-            right: 15px;
-        }
         .dateDropDown__text::placeholder {
-            color: rgba(31, 32, 65, 0.75);
+            color: $darkShade75;
         }
     }
 }

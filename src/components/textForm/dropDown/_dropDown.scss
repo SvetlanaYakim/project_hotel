@@ -1,5 +1,6 @@
-$font-size-body: 14px;           // number of guests 
-$heightRow: 44px;
+@import '../../button/button';
+
+$heightRow: 43px;
 $widthRow: var(--width);
 .dropdown {
     display: inline-flex;
@@ -7,42 +8,50 @@ $widthRow: var(--width);
         width: $widthRow;
         height: $heightRow;
         font-size: $font-size-body;
-        padding-left: 15px;
-        border: 1px solid rgba(31, 32, 65, 0.5);
+        padding-left: 14px;
+        border: 1px solid $darkShade50;
         border-radius: 2px;
         line-height: $heightRow;
         font-weight: 400;
-        color: rgba(31, 32, 65, 0.75);
+        color: $darkShade75;
+        letter-spacing: 0.85px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     &__arrow {
-        width: 14px;
+        width: 13px;
         height: 8px;
-        margin-right: 10px;
+        margin-right: 15px;
         cursor: pointer;
         display: block;
+        opacity: 0.5;
     }
     &__menu {
         width: $widthRow;
         display: none;
         position: absolute;
         z-index: 1;
-        border: 1px solid rgba(31, 32, 65, 0.5);
+        border: solid $darkShade50;
+        border-width: 0 0 1px 0;
         border-radius: 2px;
+        font-weight: 700;
+        background: #fff;
+        color: $darkShade100;
     }
     &__item {
         display: flex;
         padding-left: 15px;
         line-height: $heightRow;
-        flex: 68.75%;
+        flex: 66.5%;
         font-size: 12px;
         text-transform: uppercase;
+        letter-spacing: 0.7px;
+        margin-bottom: -6px;
     }
     &__number {
         display: flex;
-        flex: 31.25%;
+        flex: 32%;
         justify-content: space-around;
         align-items: center;
     }
@@ -50,7 +59,7 @@ $widthRow: var(--width);
         display: flex;
         height: 30px;
         width: 30px;
-        border: 1px solid rgba(31, 32, 65, 0.5);
+        border: 1px solid $darkShade50;
         border-radius: 30px;
         justify-content: center;
         align-items: center;
@@ -60,19 +69,19 @@ $widthRow: var(--width);
     font-size: 12px;
     }
     &__container:hover {
+        border-bottom: 1px solid $darkShade50;
         .dropdown__menu {
             display: flex;
             flex-wrap: wrap;
+            border-width: 0 1px 1px 1px;
         }
         .dropdown__text {
             width: $widthRow;
-            border-width: 1px 1px 0 1px;
-            border-radius: 2px;
         }
     }
     &__btn {
         width: $widthRow;
-        padding: 1px 14px;
+        padding: 7px 5px 0;
         display: flex;
         flex-direction:row-reverse;
         justify-content: space-between;

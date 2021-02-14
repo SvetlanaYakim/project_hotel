@@ -1,8 +1,9 @@
-.sex
-    form.sex__radio(action="#", method="post")
-        label.sex__wrapper(for="men")
-            input#men(type="radio", name="sex") 
-            span.sex__text Мужчина
-        label.sex__wrapper(for="women")  
-            input#women(type="radio", name="sex") 
-            span.sex__text Женщина
+mixin sex(options)
+    .sex
+        form.sex__radio(action="#", method="post")
+            label.sex__wrapper(for="men")
+                input#men(type="radio", name="sex") 
+                span.sex__text Мужчина
+            label.sex__wrapper(for="women")  
+                input#women(type="radio", name="sex") 
+                span.sex__text Женщина

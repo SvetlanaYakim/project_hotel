@@ -1,12 +1,12 @@
 $widthSmall: 40px;
-$widthMide: 87px;
-$widthBig: 320px;
+$widthMide: 99px;
+$widthBig: 322px;
 
 .button {
     text-align: center;
-    height: 44px;
+    height: 48px;
     border-radius: 22px;
-    line-height: 14.63px;
+    line-height: 15px;
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
@@ -14,6 +14,7 @@ $widthBig: 320px;
     border: 2px solid;
     color: #BC9CFF;
     background: #fff;
+    letter-spacing: 0.9px;
 }
 .button-color {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -27,7 +28,7 @@ $widthBig: 320px;
     height: 40px;
 }
 .text:hover {
-    color: #1F2041;
+    color: $darkShade100;
 }
 .widthSmall {
     width: $widthSmall;
@@ -37,6 +38,6 @@ $widthBig: 320px;
 }
 .widthBig {
     width: $widthBig;
-    background: no-repeat  96% 50%  url('images/arrow_forward.png') , linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: no-repeat  96% 50%  url('../img/arrow_forward.png'), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color: #fff;
 }

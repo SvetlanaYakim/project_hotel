@@ -12,9 +12,8 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].bundle.js',
+        filename: '[name].[hash].js',
     },
-    
     devServer: {
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, './dist'),
@@ -25,8 +24,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, './src/_index.pug'), // шаблон
-            filename: 'index.html', // название выходного файла
+            template: path.resolve(__dirname, './src/pug/pages/_index.pug'), // pattern
+            filename: 'index.html', // name outputs file
         }),
         new HtmlWebpackPugPlugin(),
 
@@ -35,7 +34,8 @@ module.exports = {
 
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/images', to: 'images' },
+                { from: 'src/assets/img', to: 'assets/img' },
+                { from: 'src/assets/fonts', to: 'assets/fonts' }
             ],
         }), // Copy images
     ],
@@ -47,17 +47,17 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader'],
             },
-            // изображения
+            // images
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
                 type: 'asset/resource',
             },
-            // шрифты и SVG
+            // fonts and SVG
             {
-                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                test: /\.(woff(2)?|ttf|svg|)$/,
                 type: 'asset/inline',
             },
-            // стили
+            // styles
             {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
@@ -70,7 +70,6 @@ module.exports = {
                     "pretty":true
                 }
             },
-            
         ],
     },
     mode: process.env.NODE_ENV || 'development'

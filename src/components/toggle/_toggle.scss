@@ -17,7 +17,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        border: 1px solid rgba(31, 32, 65, 0.25);
+        border: 1px solid $darkShade25;
         transition: .4s;
         &_round {
             border-radius: 10px;
@@ -33,9 +33,8 @@
         width: 12px;
         left: 4px;
         bottom: 3px;
-        background: rgba(31, 32, 65, 0.25);
+        background: $darkShade25;
         transition: .4s;
-            // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
     &__content {
         padding-left: 10px;
