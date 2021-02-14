@@ -1,0 +1,24 @@
+include ../../textForm/textField/textField.pug
+include ../../textForm/radioButtons/radioButtons.pug
+include ../../toggle/toggle.pug
+include ../../button/button.pug
+
+mixin registration(options)
+    .registration
+        .registration__wrapper
+            h2.registration__title Регистрация аккаунта
+            +input
+            +input
+            +sex
+            h3.registration__smallTitle дата рождения
+            +input
+            h3.registration__smallTitle данные для входа в сервис
+            +input
+            +input
+            +toggle({text: "Получать спецпредложения"})
+            +btn({title: "подобрать номер", widthBig: true})
+            .registration__content
+                p.registration__text Уже есть аккаунт на Toxin
+                +btn({title: "войти", widthMide: true, isColor: false})
+
++registration          

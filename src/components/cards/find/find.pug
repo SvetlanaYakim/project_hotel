@@ -1,0 +1,23 @@
+include ../../button/button.pug
+include ../../textForm/dateDropDown/dateDropDown.pug
+include ../../textForm/dropDown/dropDown.pug
+
+mixin find(options)
+    .find
+        .find__container
+            .find__wrapper
+                h2.find__title Найдём номера под ваши пожелания
+                .find__data
+                    .find__arrival
+                        h3.find__content прибытие
+                        +dateDropDown({content: "ДД.ММ.ГГГГ", width: "150px"})
+                    .find__departure
+                        h3.find__content выезд
+                        +dateDropDown({content: "ДД.ММ.ГГГГ", width: "150px"})
+                .find__guests
+                    h3.find__content гости
+                    +dropDown({list: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", button: true, width: "320px"})
+                .find__btn
+                    +btn({title: "подобрать номер", widthBig: true})
+
++find
