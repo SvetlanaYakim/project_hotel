@@ -7,11 +7,12 @@
         height: 44px;
         border-radius: 4px;
         border: 1px solid $darkShade25;
-        input[type="email"] {
+        input {
             width: 320px;
             line-height: 40px;
             padding-left: 15px;
         }
+
     }
     &__wrapper:hover {
         border-color: $darkShade75;
@@ -21,7 +22,7 @@
     }
     &__arrow {
         display: inline-flex;
-        width: 24px;
+        flex: 24px;
         height: 24px;
         opacity: 0;
         margin-right: 10px;
