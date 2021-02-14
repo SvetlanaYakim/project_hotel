@@ -41,6 +41,7 @@
     }
     &__text {
         line-height: 24px;
+        letter-spacing: 1.1px;
     }
 }
 input:checked + .toggle__slider {
