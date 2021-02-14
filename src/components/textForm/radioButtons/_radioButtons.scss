@@ -1,4 +1,4 @@
-$width: 220px;
+$width: 219px;
 
 .sex {
     width: $width;
@@ -14,6 +14,7 @@ $width: 220px;
         font-weight: 400;
         line-height: $font-size-h1;
         opacity: 0.5;
+        letter-spacing: 1px;
     }
     &__text::before {
         content: '';
