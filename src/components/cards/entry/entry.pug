@@ -1,0 +1,14 @@
+include ../../button/button.pug
+include ../../textForm/textField/textField.pug
+
+mixin entry(options)
+    .entry
+        .entry__wrapper
+            .entry__input
+                h2.entry__title Войти
+                +input({isType: "email", placeholder: "Email"})
+                +input({isType: "password", placeholder: "Пароль"})
+            +btn({title: "войти", widthBig: true})
+            .entry__content
+                p.entry__text Нет аккаунта на Toxin?
+                +btn({title: "создать", widthMide: true, isColor: false})
