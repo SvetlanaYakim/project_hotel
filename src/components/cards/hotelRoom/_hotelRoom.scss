@@ -1,0 +1,112 @@
+@import '../../button/button';
+@import '../../textForm/dateDropDown/dateDropDown';
+@import '../../textForm/dropDown/dropDown';
+
+.hotelRoom {
+    width: 380px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    &__wrapper {
+        width: 320px;
+        margin: auto;
+        padding-top: 41px;
+        padding-bottom: 28px;
+    }
+    &__number {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        padding-bottom: 20px;
+    }
+    &__hotelNumber {
+        font-size: $font-size-h1+1;
+        letter-spacing: 2.2px;
+        line-height: 29px;
+    }
+    &__category {
+        font-size: $font-size-h3;
+        color: $purple;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 15px;
+        letter-spacing: 1px;
+    }
+    
+    &__hotelNumber:before {
+        font-size: 15px;
+        content: '\00B0'; //no underlined degree
+        line-height: 15px;
+        padding-right: 3.5px;
+    }
+    &__costInDay {
+        color: $darkShade50;
+        font-size: $font-size-h3+5;
+        letter-spacing: 0.01px;
+        padding-top: 10px;
+        span {
+            font-weight: 400;
+            font-size: $font-size-h3;
+            letter-spacing: 0.9px;
+        }
+    }
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    &__smallTitle {
+        font-size: $font-size-h3+3;
+        padding-bottom: 5px;
+        letter-spacing: 0.2px;
+    }
+    &__bill {
+        padding-bottom: 18px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-top: 22px;
+    }
+    &__item {
+        font-size:$font-size-h3+3.4;
+        display: flex;
+        justify-content: space-between;
+        line-height: 19px;
+        padding-bottom: 14px;
+    }
+    &__content {
+        width: 220px;
+    }
+    &__info {
+        display: flex;
+        color: $darkShade25;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        justify-content: center;
+        align-items: center;
+    }
+    &__cost {
+        width: 80px;
+        text-align: right;
+    }
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 15px;
+        font-size: 21px;
+        line-height: 23px;
+        font-weight: 700;
+        margin-right: -7px;
+        .hotelRoom__none {
+            width: 170px;
+            border-bottom: 1px dotted rgba(31, 32, 65, 0.25);
+            margin-bottom: 5px;
+        }
+    }
+}

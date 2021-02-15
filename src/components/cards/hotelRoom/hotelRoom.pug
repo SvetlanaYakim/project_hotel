@@ -1,0 +1,35 @@
+include ../../button/button.pug
+include ../../textForm/dateDropDown/dateDropDown.pug
+include ../../textForm/dropDown/dropDown.pug
+
+mixin hotelRoom(options)
+    .hotelRoom
+        .hotelRoom__wrapper
+            .hotelRoom__number
+                h2.hotelRoom__title
+                    span.hotelRoom__sign N
+                    span.hotelRoom__hotelNumber 888
+                    span.hotelRoom__category люкс
+                h2.hotelRoom__costInDay 9 990₽ 
+                    span в сутки
+            .hotelRoom__data
+                .hotelRoom__arrive
+                    h3.hotelRoom__smallTitle прибытие
+                    +dateDropDown({content: "19.08.2019", width: "150px"})
+                .hotelRoom__departure
+                    h3.hotelRoom__smallTitle выезд
+                    +dateDropDown({content: "23.08.2019", width: "150px"})
+            .hotelRoom__bill
+                h3.hotelRoom__smallTitle гости
+                +dropDown({list: ["взрослые", "дети", "младенцы"], title: "Сколько гостей", button: true, width: "320px"})
+                ul.hotelRoom__list
+                    each content, cost in {' 39 963': '9 990₽ х 4 суток', ' 0': 'Сбор за услуги: скидка 2 179₽', ' 300': 'Сбор за дополнительные услуги'}
+                        li.hotelRoom__item
+                            p.hotelRoom__content= content
+                            span.hotelRoom__info i
+                            span.hotelRoom__cost= cost + '₽'
+                    li.hotelRoom__total Итого 
+                        span.hotelRoom__none
+                        span 38 081₽
+            +btn({title: "забронировать", widthBig: true})
++hotelRoom          
