@@ -1,6 +1,7 @@
 @import '../../button/button';
 @import '../../textForm/dateDropDown/dateDropDown';
 @import '../../textForm/dropDown/dropDown';
+@import '../numberRoom/numberRoom';
 
 .hotelRoom {
     width: 380px;
@@ -20,26 +21,6 @@
     }
     &__title {
         padding-bottom: 20px;
-    }
-    &__hotelNumber {
-        font-size: $font-size-h1+1;
-        letter-spacing: 2.2px;
-        line-height: 29px;
-    }
-    &__category {
-        font-size: $font-size-h3;
-        color: $purple;
-        font-weight: 700;
-        text-transform: uppercase;
-        line-height: 15px;
-        letter-spacing: 1px;
-    }
-    
-    &__hotelNumber:before {
-        font-size: 15px;
-        content: '\00B0'; //no underlined degree
-        line-height: 15px;
-        padding-right: 3.5px;
     }
     &__costInDay {
         color: $darkShade50;

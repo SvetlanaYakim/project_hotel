@@ -1,15 +1,14 @@
 include ../../button/button.pug
 include ../../textForm/dateDropDown/dateDropDown.pug
 include ../../textForm/dropDown/dropDown.pug
+include ../numberRoom/numberRoom.pug
 
 mixin hotelRoom(options)
     .hotelRoom
         .hotelRoom__wrapper
             .hotelRoom__number
                 h2.hotelRoom__title
-                    span.hotelRoom__sign N
-                    span.hotelRoom__hotelNumber 888
-                    span.hotelRoom__category люкс
+                    +numberRoom({number: '888', category: 'люкс'})
                 h2.hotelRoom__costInDay 9 990₽ 
                     span в сутки
             .hotelRoom__data
@@ -31,5 +30,4 @@ mixin hotelRoom(options)
                     li.hotelRoom__total Итого 
                         span.hotelRoom__none
                         span 38 081₽
-            +btn({title: "забронировать", widthBig: true})
-+hotelRoom          
+            +btn({title: "забронировать", widthBig: true})         
