@@ -1,21 +1,12 @@
 @import 'modules/nullstyle';
 @import 'utils/vars';
-// @import '../components/textForm/textField/textField'; //-email form
-// @import '../components/textForm/dropDown/dropDown';
-// @import 'components/textForm/checkbox/checkBox';
-// @import 'components/rateStar/rateStar';
-// @import 'components/textList/_textList';
-// @import 'components/likeButton/likeButton';
-// @import 'components/comments/comments';
-// @import 'components/colors/colors';
-// @import 'components/titels/titels';
-// @import 'components/toggle/toggle';
-// @import 'components/pagination/pagination';
-// @import '../components/textForm/dateDropDown/dateDropDown';
-// @import '../components/rangeSlider/rangeSlider';
-// @import '../components/datepicker/datepicker';
-@import '../../components/cards/find/find';
-@import '../../components/cards/registration/registration';
+// @import '../../components/cards/find/find';
+// @import '../../components/cards/registration/registration';
+// @import '../../components/cards/entry/entry';
+// @import '../../components/cards/hotelRoom/hotelRoom';
+@import '../../components/cards/exampleRoom/exampleRoom';
+@import 'utils/libs';
+@import 'utils/components';
 
 .body {
     font-family: $font-family;
