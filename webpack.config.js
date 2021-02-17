@@ -54,7 +54,7 @@ module.exports = {
             },
             // fonts and SVG
             {
-                test: /\.(woff(2)?|ttf|svg|)$/,
+                test: /\.(woff(2)?|ttf|svg|eot)$/,
                 type: 'asset/inline',
             },
             // styles
