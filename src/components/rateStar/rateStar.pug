@@ -1,8 +1,11 @@
 mixin Star(options)
     -
-        var spanClassName = "star__item"
-        spanClassName += options.isStar ? " checked" : " "
-        var list = [{id: "first"}, {id: "two"}, {id: "three"}, {id: "fore"}, {id: "five"}]
-    .star
-        for each in list
-            span(id=each.id, class=spanClassName )= ""
+        var inputClassName = "star__item"
+        var value = 5
+        var list = [{id: "five"}, {id: "fore"}, {id: "three"}, {id: "two"}, {id: "first"} ]
+    form.form(action="#")
+        .star
+            .star__stars
+                for each in list
+                    input(type="radio", name="rating", id=each.id, class=inputClassName, value= value--)
+                    label.star__label.gradient-icon.material-icons(for=each.id) 

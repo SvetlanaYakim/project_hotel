@@ -1,15 +1,30 @@
 .star {
-    display: flex;
-    width: 100px;
-    height: 20px;
-    &__item {
-        width: 20px;
-        height: 19px;
-        background-image: url("images/star_border.png");
+    font-family: $icon;
+    font-size: 24px;
+    width: 120px;
+    &__stars {
+        display: flex;
+        flex-direction: row-reverse;
     }
-    .checked {
-        background-image: url("images/star.png");
+    &__item {
+        display: none;
+    }
+    &__label {
+        cursor: pointer;
+    }
+    &__label:before {
+        display: block;
+        content: "star_border";
+        transition: color 0.3s ease 0s;
+    }
+    &__item:checked, 
+    &__item:checked ~ &__label:before{
+        content: "star";
     }
 }
-
-
+.gradient-icon {
+    background: -webkit-gradient(linear, center top, center bottom, from(#BC9CFF), to(#8BA4F9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+}
