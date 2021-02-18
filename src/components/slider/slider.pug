@@ -11,9 +11,15 @@ mixin slider(options)
         var nameImg = 1
         var nameId = 'img'
         var arr = options.src 
-    .slider
+    form.slider
         .slider__wrapper._middle
             .slider__items
+                if options.arrow
+                    .slider__arrow
+                        .slider__left
+                            span.material-icons.md-36 chevron_left
+                        .slider__right  
+                            span.material-icons.md-36 chevron_right
                 for each in arr
                     if nameImg == 1
                         input.slider__item(type='radio', id= nameId + nameImg++, name= nameId, checked)
