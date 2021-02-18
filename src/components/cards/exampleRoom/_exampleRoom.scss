@@ -1,0 +1,53 @@
+.exampleRoom {
+    width: 270px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+    &__wrapper {
+    }
+    &__img img {
+        border-radius: 4px 4px 0 0;
+        width: 270px;
+        height: 151px;
+    }
+    &__info {
+        padding: 12px 20px 19px 20px
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 7px;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+        padding-bottom: 8px;
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 0px;
+        }
+        .number__number {
+            font-size: 20px;
+            line-height: 27px;
+            font-weight: 700;
+            letter-spacing: 1.9px;
+        }
+    }
+    &__text {
+        color: $darkShade50;
+        font-size: $font-size-h3;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+        span {
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 1.1px;
+            padding-right: 3px;
+        }
+    }
+}
+._space {
+    letter-spacing: 2px;
+    span {
+        letter-spacing: -0.5px;
+        padding-right: 5px;
+    }
+}

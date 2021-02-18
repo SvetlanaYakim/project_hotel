@@ -1,0 +1,24 @@
+include ../numberRoom/numberRoom.pug
+include ../../rateStar/rateStar.pug
+include ../../slider/slider.pug
+
+mixin exampleRoom(options)
+    .exampleRoom
+        .exampleRoom__wrapper
+            .exampleRoom__img
+                +slider({src: ['assets/img/room001.png',
+            'assets/img/room002.png', 
+            'assets/img/room001.png', 
+            'assets/img/room002.png'], arrow: true})
+            .exampleRoom__info
+                .exampleRoom__row
+                    +numberRoom({number: options.number, category: options.category})
+                    p.exampleRoom__text 
+                        span=options.cost
+                        |в сутки
+                .exampleRoom__row
+                    +Star
+                    p.exampleRoom__text._space 
+                        span=options.numberReviews
+                        |Отзывов
++exampleRoom({number: '888', category: 'люкс', cost: '9 990₽', numberReviews: '145'})
