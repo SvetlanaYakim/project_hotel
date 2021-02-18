@@ -4,7 +4,6 @@
     flex-flow: column-reverse;
     &__wrapper {
     }
-
     &__slider  {
     }
     &__inputs {
@@ -12,7 +11,7 @@
         justify-content: flex-end;
     }
     .rangeSlider__slider {
-        color: rgba(31, 32, 65, 0.5);
+        color: $darkShade50;
         text-align: center;
         width: 45px;
         font-size: 12px;
@@ -24,18 +23,16 @@
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 .noUi-target {
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $darkShade25;
     border-radius: 3px;
     background: #fff;
     box-shadow: none;
     height: 6px;
 }
-
 .noUi-handle::after,
 .noUi-handle::before {
     display: none;
 }
-
 .noUi-handle {
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border: 2px solid #FFFFFF;
@@ -48,7 +45,4 @@
     height: 14px;
     right: -6px;
     top: -5px;
-}
-.noUi-horizontal {
-    
 }
