@@ -1,0 +1,62 @@
+.slider {
+	&__wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+	}
+	&__items {
+        width: 500%;
+        height: 100%;
+        display: flex;
+	}
+	&__item {
+        width: 20%;
+        transition: all .6s ease;
+	}
+    &__slider {
+        width: 25%;
+        transition: all .6s ease;
+        img {
+            border-radius: 4px 4px 0 0;
+        }
+    }
+	&__navigation {
+        display: flex;
+        position: absolute;
+        bottom: 16px;
+        left: 75%;
+    }
+	&__bar {
+        width: 7.5px;
+        height: 7.5px;
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        margin-right: 3.75px;
+        cursor: pointer;
+        filter: drop-shadow(0px 5px 5px rgba(31, 32, 65, 0.3));
+        transition: all 1s ease;
+        &:hover {
+            background: #FFFFFF;
+            box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+        }
+    }
+}
+._middle {
+    transform: translate(0, 0);
+}
+input[name='img'] {
+    position: absolute;
+    visibility: hidden;
+}
+#img1:checked ~ ._one {
+    margin-left: 0%;
+}
+#img2:checked ~ ._one {
+    margin-left: -25%;
+}
+#img3:checked ~ ._one {
+    margin-left: -50%;
+}
+#img4:checked ~ ._one {
+    margin-left: -75%;
+}

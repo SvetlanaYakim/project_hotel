@@ -1,0 +1,35 @@
+//- example use
+    +slider({src: ['assets/img/room001.png',  -- add source imagin
+            'assets/img/room002.png', 
+            'assets/img/room001.png', 
+            'assets/img/room002.png']})
+//
+
+mixin slider(options)
+    -
+        var index = 0
+        var nameImg = 1
+        var nameId = 'img'
+        var arr = options.src
+    .slider
+        .slider__wrapper._middle
+            .slider__items
+                for each in arr
+                    if nameImg == 1
+                        input.slider__item(type='radio', id= nameId + nameImg++, name= nameId, checked)
+                    else
+                        input.slider__item(type='radio', id= nameId + nameImg++, name= nameId)
+                .slider__slider._one
+                    img(src=arr[index++])
+                for each in arr
+                    if arr[index]
+                        .slider__slider
+                            img(src=arr[index++])
+            .slider__navigation
+                -var nameImg = 1
+                -var stop = index+1
+                label.slider__bar(for= nameId + nameImg++)
+                for each in arr
+                    if nameImg < stop
+                        label.slider__bar(for= nameId + nameImg++)
+
