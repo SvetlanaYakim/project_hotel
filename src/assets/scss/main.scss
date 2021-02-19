@@ -10,7 +10,8 @@
 
 .body {
     font-family: $font-family;
-    color: rgba(31, 32, 65, 0.75);
+    color: $darkShade75;
+    background: rgb(100, 185, 74);
 }
 
 h1, h2, h3 {
@@ -19,5 +20,9 @@ h1, h2, h3 {
 }
 
 .wrapper {
-    padding: 200px;
+    display: flex;
+    justify-content: center;
+    background: rgb(147, 240, 128);
+    margin: auto;
+    margin-top: 20px;
 }

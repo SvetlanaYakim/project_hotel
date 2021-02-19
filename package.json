@@ -21,6 +21,7 @@
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^4.5.1",
     "html-webpack-pug-plugin": "^2.0.1",
+    "material-design-icons": "^3.0.1",
     "node-sass": "^5.0.0",
     "nouislider": "^14.6.3",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
